@@ -1,0 +1,57 @@
+﻿@page
+@model WebApp_RazorPages.Pages.SingUpModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+<section id="signup">
+
+    <div class="container">
+        <form method="post" novalidate>
+            <h1> Create Account</h1>
+            <p> Already have an account?<a asp-page="/Signin"> Sign in</a></p>
+
+            <div class="content">
+                <div id="form-firstname" class="input-group">
+                    <label asp-for="@Model.From.FirstName"></label>
+                    <span asp-validation-for="@Model.From.FirstName"></span>
+                    <input asp-for="@Model.From.FirstName" placeholder="  First name" />
+
+                </div>
+                <div id="form-lastname" class="input-group">
+                    <label asp-for="@Model.From.LastName"></label>
+                    <span asp-validation-for="@Model.From.LastName"></span>
+                    <input asp-for="@Model.From.LastName" placeholder="  Last Name" />
+
+                </div>
+                <div id="form-email" class="input-group">
+                    <label asp-for="@Model.From.Email"></label>
+                    <span asp-validation-for="@Model.From.Email"></span>
+                    <input asp-for="@Model.From.Email" placeholder=" Email" />
+
+                </div>
+                <div id="form-passsword" class="input-group">
+                    <label asp-for="@Model.From.Password"></label>
+                    <span asp-validation-for="@Model.From.Password"></span>
+                    <input asp-for="@Model.From.Password" placeholder="  Password" type="password" />
+
+                </div>
+                <div id="form-confrim" class="input-group">
+                    <label asp-for="@Model.From.ComfrimPassword"></label>
+                    <span asp-validation-for="@Model.From.ComfrimPassword"></span>
+                    <input asp-for="@Model.From.ComfrimPassword" placeholder=" Password" type="password" />
+
+                </div>
+
+                <div id="form-terms" class="checkbox-group">
+                    <span asp-validation-for="@Model.From.Terms"></span>
+                    <input type="checkbox" asp-for="@Model.From.Terms" />
+
+                    <label asp-for="@Model.From.Terms"></label>
+                </div>
+
+
+            </div>
+            <button id="form-buttom" class="btn-theme-s" type="submit"> Sign Up</button>
+        </form>
+    </div>
+</section>
