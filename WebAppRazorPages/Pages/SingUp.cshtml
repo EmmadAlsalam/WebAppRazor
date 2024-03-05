@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp_RazorPages.Pages.SingUpModel
+@model WebAppRazorPages.Pages.SingUpModel
 @{
     ViewData["Title"] = Model.PageTitle;
 }
@@ -43,15 +43,14 @@
                 </div>
 
                 <div id="form-terms" class="checkbox-group">
+                    <input asp-for="@Model.From.Terms" />
                     <span asp-validation-for="@Model.From.Terms"></span>
-                    <input type="checkbox" asp-for="@Model.From.Terms" />
-
-                    <label asp-for="@Model.From.Terms"></label>
+                    <label asp-for="@Model.From.Terms"> I agree to the <a asp-page="/terms"> Terms</a> & <a asp-page="/conditions "> conditions</a> </label>
                 </div>
-
-
+                
             </div>
             <button id="form-buttom" class="btn-theme-s" type="submit"> Sign Up</button>
+            
         </form>
     </div>
 </section>

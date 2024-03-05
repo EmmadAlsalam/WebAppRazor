@@ -1,4 +1,4 @@
-﻿namespace WebApp_RazorPages.Pages.Components;
+﻿namespace WebAppRazorPages.Pages.Components;
 
 public class ButtonViewModel
 {
