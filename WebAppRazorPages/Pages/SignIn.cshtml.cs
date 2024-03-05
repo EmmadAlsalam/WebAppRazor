@@ -2,15 +2,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebAppRazorPages.Models;
 namespace WebAppRazorPages.Pages;
-public class SingUpModel : PageModel
+
+public class SignInModel : PageModel
 {
-    public string PageTitle { get; set; } = "Sign up";
+    public string PageTitle { get; set; } = "Sign In";
 
     [BindProperty]
-    public SignUpFormModel From { get; set; } = new SignUpFormModel();
+    public SignInFormModel From { get; set; } = new SignInFormModel();
     public void OnGet()
     {
     }
+
     public IActionResult OnPost()
     {
         if (!ModelState.IsValid)
@@ -23,5 +25,4 @@ public class SingUpModel : PageModel
         // Redirect till /singup
         return RedirectToPage("/singup");
     }
-
 }
