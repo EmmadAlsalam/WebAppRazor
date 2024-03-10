@@ -24,11 +24,7 @@
 
                 </div>
 
-                <div id="form-remember" class="checkbox-group">
-                    <input asp-for="@Model.From.RememberMe" />
-                    <span asp-validation-for="@Model.From.RememberMe"></span>
-                    <label asp-for="@Model.From.RememberMe"> I agree to the <a asp-page="/terms"> Terms</a> & <a asp-page="/conditions "> conditions</a> </label>
-                </div>
+
 
                 <button id="form-buttom" class="btn-theme-s" type="submit"> Sign in</button>
                 <a id="forgot-password" asp-page="/forgot"> Forgot your password</a>
@@ -48,3 +44,4 @@
         
     </div>
 </section>
+
